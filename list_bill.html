@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="vi">
+    <title> PetShop
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="loading-icon">
+
+    </div>
+    <div class="container-fluid">
+        <div class='top-bar row'>
+            <div class="col-md-6 top-bar-left">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 top-bar-right">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item cart-link">
+                        <a class="nav-link cart-select" href="javascript:void(0)">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng
+                            <span class="cart__count"> (2) </span>
+                        </a>
+                        <div class='dropdown-nav popup__cart-body'>
+
+                            <div class='view-item cart__list-item'>
+                                <div class="media">
+                                    <a href="javascript:void(0)" class='remove-icon cart-popup__remove-icon remove-product-item'>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </a>
+                                    <img class="" src="images/WHISKAS-nuocSotThitBo.jpg" alt="image" width="45px">
+									<div class="media-body">
+										<p class="mt-0 media__product-title">
+											<a href="detail.html">Pate cho mèo vị nước sốt thịt bò WHISKAS Beef Flavour Sauce</a>
+										</p>
+										<p class='product-price product-price__popup'>
+											<span class=''>25.000</span> * 10</p>
+									</div>
+								</div>
+								<div class="media">
+									<a href="javascript:void(0)" class='remove-icon cart-popup__remove-icon remove-product-item col-3'>
+										<span class="glyphicon glyphicon-remove"></span>
+									</a>
+									<img class="" src="images/PURINA-PRO-PLAN-small&miniPuppy.jpg" alt="image" width="45px">
+									<div class="media-body">
+										<p class="mt-0 media__product-title">
+											<a href="detail.html">Thức ăn cho chó con PURINA PRO PLAN Small & Mini Puppy</a>
+										</p>
+										<p class='product-price product-price__popup'>
+											<span class=''>615.000</span> * 1</p>
+									</div>
+								</div>
+							</div>
+							<hr class="hr--border-cart-popup"></hr>
+							<div class='dropdown-cart__caption'>
+								<div class='cart-total text-right'>
+									<span>Tổng tiền:</span>
+									<span>
+										865.000 VND
+									</span>
+								</div>
+								<hr class="hr--border-cart-popup"></hr>
+								<div class='text-center dropdown-cart__bottom'>
+									<a href="cart.html" class='btn__link btn__link-dropdow-cart'>
+										<span class="glyphicon glyphicon-search"></span> Chi tiết</a>
+									<a href="javascript:void(0)" class='btn__link btn__link-dropdow-cart close_popup_cart'>Tiếp tục mua hàng</a>
+								</div>
+							</div>
+						</div>
+                        <!-- end-cart-body-->
+                    </li>
+                    <li class="nav-item login-link">
+                        <a class="nav-link show-user-nav" href="javascript:void(0)">Minh Thiện</a>
+                        <div class="dropdown-nav popup__user-nav">
+                            <ul>
+                                <li>
+                                    <a href="user_profile.html" class='active'>Thông tin cá nhân</a>
+                                </li>
+                                <li>
+                                    <a href="change_password.html">Đổi mật khẩu</a>
+                                </li>
+                                <li>
+                                    <a href="list_bill.html">Danh sách đơn hàng</a>
+                                </li>
+                                <li>
+                                    <a href="#">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- top-bar -->
+        <div class="row clearfix" id="header-logo">
+            <div class='col-12 col-sm-12 col-md-6 col-lg-6 ' id='header-logo-left'>
+                <p class='p-logo'>
+                    <a href="">PetShop</a>
+                </p>
+            </div>
+
+            <div class='col-12 col-sm-12 col-md-6 col-lg-6 header-right'>
+                <div class="search-box">
+                    <div class="form-input-search">
+                        <input type="text" name="txtKeyword" placeholder="Nhập từ khóa cần tìm kiếm" class="search-input">
+                        <span class='icon-search'>
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="search-result">
+                    </div>
+                    <div class="text-example">
+                        <span>ví dụ: WHISKAS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header-Logo -->
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto menu-list">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Trang Chủ
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
+							Dành Cho Mèo
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="category.html">THỨC ĂN DINH DƯỠNG</a>
+							<a class="dropdown-item" href="category.html">PHỤ KIỆN</a>
+							<a class="dropdown-item" href="category.html">CHUỒNG, NỆM</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
+							Dành Cho Chó
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="category.html">THỨC ĂN DINH DƯỠNG</a>
+							<a class="dropdown-item" href="category.html">PHỤ KIỆN</a>
+							<a class="dropdown-item" href="category.html">CHUỒNG, NỆM</a>
+						</div>
+					</li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div id='wrapper'>
+            <div class="row">
+                <div class="col-12 col-sm-2 col-md-2 col-lg-2 nav-left small--text-center">
+                    <hr class="hr--border-top small-hidden"></hr>
+                    <nav class="nav__sidebar">
+                        <ul>
+                            <li>
+                                <a href="user_profile.html">Thông tin cá nhân</a>
+                            </li>
+                            <li>
+                                <a href="change_password.html">Đổi mật khẩu</a>
+                            </li>
+                            <li>
+                                <a href="list_bill.html">Danh sách đơn hàng</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-10 col-lg-10 ">
+                    <div class='main-content'>
+                        <hr class="hr--border-top small-hidden"></hr>
+                        <div class=''>
+                            <nav class="breadcrumb-nav small--text-center" aria-label="You are here">
+                                <a href="index.html" itemprop="url" title="Back to the homepage">
+                                    <span itemprop="title">Trang Chủ</span>
+                                </a>
+                                <span class="breadcrumb-nav__separator" aria-hidden="true">›</span>
+                                <a href="user_profile.html">Danh sách đơn hàng</a>
+                            </nav>
+                        </div>
+
+                        <div class='block_wrap row profile_block'>
+                            <div class='col-11'>
+                                <p class='section__title'>Danh sách đơn hàng</p>
+                                
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Ngày đặt hàng</th>
+                                            <th>Coupon</th>
+                                            <th>Tổng tiền</th>
+                                            <th>Chi tiết hóa đơn</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>15/10/2022</td>
+                                            <td></td>
+                                            <td>865.000 VND</td>
+                                            <td>
+                                                <div class='btn btn-primary btn-sm' data-toggle="modal" data-target=".show-bills-modal">Chi tiết</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class='col-1'>
+
+                            </div>
+                        </div>
+                        
+                        <div class="modal fade show-bills-modal" id='myModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Chi tiết đơn hàng</h5>
+                                        <button type="button" class="close btn__close-icon" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                            <div class="row user-info">
+                                                <div class='col-12'>
+                                                    <p>
+                                                        <label class='label-bold'> Email: </label>
+                                                        <span>19507411@NguyenMinhThien@gmail.com</span>
+                                                    </p>
+                                                </div>
+                                                <div class='col-md-6 col-sm-12'>
+                                                    <p>
+                                                        <label class='label-bold'> Họ: </label>
+                                                        <span>Nguyễn</span>
+                                                    </p>
+                                                </div>
+                                                <div class='col-md-6 col-sm-12'>
+                                                    <p>
+                                                        <label class='label-bold'> Tên: </label>
+                                                        <span>Minh Thiện</span>
+                                                    </p>
+                                                </div>
+                                                <div class='col-md-6 col-sm-12'>
+                                                    <p>
+                                                        <label class='label-bold'> Giới tính: </label>
+                                                        <span>Nam</span>
+                                                    </p>
+                                                </div>
+                                                <div class='col-md-6 col-sm-12'>
+                                                    <p>
+                                                        <label class='label-bold'> Số điện thoại: </label>
+                                                        <span>09xxxxx</span>
+                                                    </p>
+                                                </div>
+                                                <div class='col-12'>
+                                                    <p>
+                                                        <label class='label-bold'> Địa chỉ: </label>
+                                                        <span>12, Nguyễn Văn Bảo, Gò Vấp</span>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <table class='responsive-table table--no-border'>
+                                                    <thead class='cart__row small-hidden'>
+                                                        <tr>
+                                                            <th class="text-left cart__table-cell-image">Sản phẩm</th>
+                                                            <th class="text-center cart__table-cell--meta"></th>
+                                                            <th class="text-center cart__table-cell--price">Đơn giá</th>
+                                                            <th class="text-center cart__table-cell--quantity">Số lượng</th>
+                                                            <th class="text-right cart__table-cell--total-price">Tổng</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class='responsive-table__row'>
+                                                            <td class="text-left cart__table-cell-image">
+                                                                <img src="images/WHISKAS-nuocSotThitBo.jpg" width='100%' />
+                                                            </td>
+                                                            <td class="cart__table-cell--meta small--text-center">
+                                                                <p>
+                                                                    <a href="detail.html">
+                                                                        <h6>Pate cho mèo vị nước sốt thịt bò WHISKAS Beef Flavour Sauce</h6>
+                                                                    </a>
+                                                                    <small>Số lượng: 10</small>
+                                                                </p>
+
+                                                            </td>
+                                                            <td class="cart__table-cell--price medium-up--text-center" data-label='Đơn giá'>25.000 vnđ</td>
+                                                            <td class='cart__table-cell--quantity medium-up--text-center' data-label='Số lượng'>
+                                                                <span>10</span>
+                                                            </td>
+                                                            <td class='cart__table-cell--quantity text-right' data-label="Tổng">250.000 vnđ</td>
+                                                        </tr>
+                                                        <tr class='responsive-table__row'>
+                                                            <td class="text-left cart__table-cell-image">
+                                                                <img src="images/PURINA-PRO-PLAN-small&miniPuppy.jpg" width='100%' />
+                                                            </td>
+                                                            <td class="cart__table-cell--meta small--text-center">
+                                                                <p>
+                                                                    <a href="detail.html">
+                                                                        <h6>Thức ăn cho chó con PURINA PRO PLAN Small & Mini Puppy</h6>
+                                                                    </a>
+                                                                    <small>Số lượng: 1</small>
+                                                                </p>
+
+                                                            </td>
+                                                            <td class="cart__table-cell--price medium-up--text-center" data-label='Đơn giá'>615.000 vnđ</td>
+                                                            <td class='cart__table-cell--quantity medium-up--text-center' data-label='Số lượng'>
+                                                                <span>1</span>
+                                                            </td>
+                                                            <td class='cart__table-cell--quantity text-right' data-label="Tổng">615.000 vnđ</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class='cart-footer text-right'>
+                                                    <p class='small--text-center'>
+                                                        <span>Tổng tiền: </span>
+                                                        <span class='span__total_price'>865.000 vnđ</span>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+
+		<div id='footer' class="" style="text-align:center;">
+			19507411@NguyenMinhThien - Copy right 2022
+		</div>
+    </div>
+    <script type="text/javascript" src='js/jquery.min.js'></script>
+    <script type="text/javascript" src='js/bootstrap.min.js'></script>
+    <script src='js/elevatezoom/jquery.elevatezoom.js'></script>
+    <script type="text/javascript" src='js/myscript.js'></script>
+</body>
+
+</html>

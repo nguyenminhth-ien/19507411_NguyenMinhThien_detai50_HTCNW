@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head lang="vi">
+	<title> PetShop
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class='top-bar row'>
+			<div class="col-md-6 top-bar-left">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link active" href="#"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-6 top-bar-right">
+				<ul class="nav justify-content-end">
+					<li class="nav-item cart-link">
+						<a class="nav-link cart-select" href="javascript:void(0)">
+							<span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng
+							<span class="cart__count"> (2) </span>
+						</a>
+						<div class='dropdown-nav popup__cart-body'>
+
+							<div class='view-item cart__list-item'>
+								<div class="media">
+									<a href="javascript:void(0)" class='remove-icon cart-popup__remove-icon remove-product-item col-3'>
+										<span class="glyphicon glyphicon-remove"></span>
+									</a>
+									<img class="" src="images/WHISKAS-nuocSotThitBo.jpg" alt="image" width="45px">
+									<div class="media-body">
+										<p class="mt-0 media__product-title">
+											<a href="detail.html">Pate cho mèo vị nước sốt thịt bò WHISKAS Beef Flavour Sauce</a>
+										</p>
+										<p class='product-price product-price__popup'>
+											<span class=''>25.000</span> * 10</p>
+									</div>
+								</div>
+								<div class="media">
+									<a href="javascript:void(0)" class='remove-icon cart-popup__remove-icon remove-product-item col-3'>
+										<span class="glyphicon glyphicon-remove"></span>
+									</a>
+									<img class="" src="images/PURINA-PRO-PLAN-small&miniPuppy.jpg" alt="image" width="45px">
+									<div class="media-body">
+										<p class="mt-0 media__product-title">
+											<a href="detail.html">Thức ăn cho chó con PURINA PRO PLAN Small & Mini Puppy</a>
+										</p>
+										<p class='product-price product-price__popup'>
+											<span class=''>615.000</span> * 1</p>
+									</div>
+								</div>
+							</div>
+							<hr class="hr--border-cart-popup"></hr>
+							<div class='dropdown-cart__caption'>
+								<div class='cart-total text-right'>
+									<span>Tổng tiền:</span>
+									<span>
+										865.000 VND
+									</span>
+								</div>
+								<hr class="hr--border-cart-popup"></hr>
+								<div class='text-center dropdown-cart__bottom'>
+									<a href="cart.html" class='btn__link btn__link-dropdow-cart'>
+										<span class="glyphicon glyphicon-search"></span> Chi tiết</a>
+									<a href="javascript:void(0)" class='btn__link btn__link-dropdow-cart close_popup_cart'>Tiếp tục mua hàng</a>
+								</div>
+							</div>
+						</div>
+						<!-- end-cart-body-->
+					</li>
+					<li class="nav-item login-link">
+                        <a class="nav-link show-user-nav" href="javascript:void(0)">Minh Thiện</a>
+                        <div class="dropdown-nav popup__user-nav">
+                            <ul>
+                                <li>
+                                    <a href="user_profile.html">Thông tin cá nhân</a>
+                                </li>
+                                <li>
+                                    <a href="change_password.html">Đổi mật khẩu</a>
+                                </li>
+                                <li>
+                                    <a href="list_bill.html">Danh sách đơn hàng</a>
+                                </li>
+                                <li>
+                                    <a href="#">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>	
+				</ul>
+			</div>
+		</div>
+		
+
+		<div class="row clearfix" id="header-logo">
+			<div class='col-12 col-sm-12 col-md-6 col-lg-6 ' id='header-logo-left'>
+				<p class='p-logo'>
+					<a href="#">PetShop</a>
+				</p>
+			</div>
+
+			<div class='col-12 col-sm-12 col-md-6 col-lg-6 header-right'>
+				<div class="search-box">
+					<div class="form-input-search">
+						<input type="text" name="txtKeyword" placeholder="Nhập từ khóa cần tìm kiếm" class="search-input">
+						<span class='icon-search'>
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</span>
+					</div>
+					<div class="search-result">
+					</div>
+					<div class="text-example">
+						<span>ví dụ: WHISKAS</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- het header logo-->
+		<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto menu-list">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Trang Chủ
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
+							Dành Cho Mèo
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="category.html">THỨC ĂN DINH DƯỠNG</a>
+							<a class="dropdown-item" href="category.html">PHỤ KIỆN</a>
+							<a class="dropdown-item" href="category.html">CHUỒNG, NỆM</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
+							Dành Cho Chó
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="category.html">THỨC ĂN DINH DƯỠNG</a>
+							<a class="dropdown-item" href="category.html">PHỤ KIỆN</a>
+							<a class="dropdown-item" href="category.html">CHUỒNG, NỆM</a>
+						</div>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="gioithieu.html">Giới thiệu</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="lienhe.html">Liên Hệ</a>
+					</li>
+					<li class="nav-item">
+						<a href="sitemap.html" class="nav-link">Sitemap</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		
+
+		<div id='wrapper'>
+			<div id='sale-product' class='block-content'>
+				<div class="row">
+					<div class='title-heading col-12'>
+						<h5>Sản phẩm khuyến mãi</h5>
+					</div>
+					<div class="block_wrap row">
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/WHISKAS-nuocSotThitBo.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Pate cho mèo vị nước sốt thịt bò WHISKAS Beef Flavour Sauce</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">25.000</span>
+										<s class="product__price--compare">26.700</s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/PURINA-PRO-PLAN-small&miniPuppy.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Thức ăn cho chó con PURINA PRO PLAN Small & Mini Puppy</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">615.000</span>
+										<s class="product__price--compare">650.000</s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/CatSeaFish.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Pate cho mèo vị cá ngừ CAT SEA FISH Pure Tuna Meat (đặc biệt)</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">30.000</span>
+										<s class="product__price--compare">33.600</s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/pateCIAO-Tuna&Salmon.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Pate cho mèo CIAO Tuna & Salmon vị cá ngừ và cá hồi Nhật Bản</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">20.000</span>
+										<s class="product__price--compare">22.500</s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/ROYAL-CANIN-Mini-Puppy.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Thức ăn cho chó con cỡ nhỏ ROYAL CANIN Mini Puppy</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">195.000</span>
+										<s class="product__price--compare">200.000</s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/ZENITH-Puppy-Chicken-Potato.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Thức ăn cho chó con ZENITH Puppy</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">220.000</span>
+										<s class="product__price--compare">222.500</s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/MKB-Chihuahua.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Thức ăn cho chó Chihuahua MKB Nutrition</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">565.000 </span>
+										<s class="product__price--compare">580.000</s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/thuc-an-cho-meo-me-va-meo-con-catidea-basic-meat-kitten.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Thức ăn cho mèo mẹ & mèo con CATIDEA Basic Meat</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">555.000</span>
+										<s class="product__price--compare">565.000</s> vnđ
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						
+						
+			<div id='new-product' class='block-content'>
+				<div class="row">
+					<div class='title-heading col-12'>
+						<h5>
+							<a href="">Sản phẩm bán chạy</a>
+						</h5>
+					</div>
+					<div class='block_wrap row'>
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/balo-dung-cho-meo-dang-hop-mat-luoi-loffe-pet-space-backpack.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Balo đựng chó mèo dáng hộp mặt lưới LOFFE Pet Space Backpack</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">565.000</span>
+										<s class="product__price--compare"></s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/balo-dung-cho-meo-nhieu-hoa-tiet-loffe-pattern-backpack.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Balo đựng chó mèo nhiều họa tiết LOFFE Pattern Backpack</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">495.000</span>
+										<s class="product__price--compare"></s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/long-van-chuyen-cho-meo-iris-pdpc-dog-cat-kennel.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Lồng vận chuyển chó mèo IRIS PDPC Dog & Cat Kennel</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">1.050.000</span>
+										<s class="product__price--compare"></s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/nem-cho-cho-meo-hinh-vuong-bobby-pet-16rb004.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Nệm cho chó mèo hình vuông BOBBY PET 16OB004</a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">455.000</span>
+										<s class="product__price--compare"></s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="product-item col-3">
+							<div class="thumbnail">
+								<span class="badge badge--new">
+									<span>New</span>
+								</span>
+								<span class="badge badge--sale">
+									<span>Sale</span>
+								</span>
+								<a href="detail.html">
+									<img src="images/pate-cho-cho-vi-thit-bo-iris-one-care-beef100g.jpg" alt="...">
+								</a>
+								<div class="product-caption text-left">
+									<p class='product-title'>
+										<a href="">Pate cho chó vị thịt bò IRIS One Care Beef </a>
+									</p>
+									<p class='product-price'>
+										<span class="product__price-on-sale">35.000</span>
+										<s class="product__price--compare"></s> VND
+									</p>
+									<p>
+										<a href="detail.html" class="product-btn__a" role="button">
+											<i class="fa fa-search"></i> Chi tiết</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div id='footer' class="" style="text-align:center;">
+			19507411@NgyenMinhThien - Copy right 2022
+		</div>
+	</div>
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript" src='js/bootstrap.min.js'></script>
+	<script src='js/elevatezoom/jquery.elevatezoom.js'></script>
+	<script type="text/javascript" src='js/myscript.js'></script>
+</body>
+
+</html>

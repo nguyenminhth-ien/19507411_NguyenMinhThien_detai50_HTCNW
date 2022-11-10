@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="vi">
+    <title> PetShop
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="loading-icon">
+
+    </div>
+    <div class="container-fluid">
+        <div class='top-bar row'>
+            <div class="col-md-6 top-bar-left">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 top-bar-right">
+				<ul class="nav justify-content-end">
+					<li class="nav-item cart-link">
+						<div class='dropdown-nav popup__cart-body'>
+							<hr class="hr--border-cart-popup"></hr>
+						</div>
+						<!-- end-cart-body-->
+					</li>
+
+					<li class="nav-item login-link">
+                        <a class="nav-link show-user-nav" href="login.html">Đăng nhập</a>
+                    </li>	
+                    <li class="nav-item login-link">
+                        <a class="nav-link show-user-nav" href="register.html">Đăng kí</a>
+                    </li>
+				</ul>
+			</div>
+        </div>
+        <!-- top-bar -->
+        <div class="row clearfix" id="header-logo">
+            <div class='col-12 col-sm-12 col-md-6 col-lg-6 ' id='header-logo-left'>
+                <p class='p-logo'>
+                    <a href="">PetShop</a>
+                </p>
+            </div>
+
+            <div class='col-12 col-sm-12 col-md-6 col-lg-6 header-right'>
+                <div class="search-box">
+                    <div class="form-input-search">
+                        <input type="text" name="txtKeyword" placeholder="Nhập từ khóa cần tìm kiếm" class="search-input">
+                        <span class='icon-search'>
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="search-result">
+                    </div>
+                    <div class="text-example">
+                        <span>ví dụ: WHISKAS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header-Logo -->
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto menu-list">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Trang Chủ
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Dành Cho Mèo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="category.html">THỨC ĂN DINH DƯỠNG</a>
+                            <a class="dropdown-item" href="category.html">PHỤ KIỆN</a>
+                            <a class="dropdown-item" href="category.html">CHUỒNG, NỆM</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Dành Cho Chó
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="category.html">THỨC ĂN DINH DƯỠNG</a>
+                            <a class="dropdown-item" href="category.html">PHỤ KIỆN</a>
+                            <a class="dropdown-item" href="category.html">CHUỒNG, NỆM</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+		
+        
+        
+        <div class="main">
+            <div class="map">
+                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8576312701493!2d106.68531071471884!3d10.822205292290473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e5496d03cf%3A0xa5b8e7395ec636b9!2zMTIgTmd1eeG7hW4gVsSDbiBC4bqjbywgUGjGsOG7nW5nIDQsIEjhu5MgQ2jDrSBNaW5oLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1646638970473!5m2!1svi!2s" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+        
+            </div>
+            <div class="form">
+                <div class="lienhe">
+                    <h1>Liên hệ</h1>
+                <div class="box-info-contact">
+                    <ul class="list-info">
+                        <li>
+                            <p>Địa chỉ chúng tôi</p>
+                            <p><strong>12 Nguyễn Văn Bảo-P4-Gò Vấp -TP. Hồ Chí Minh</strong></p>
+                        </li>
+                        <li>
+                            <p>Email chúng tôi:</p>
+                            <p><strong>19507411.NguyenMinhThien@gmail.com</strong></p>
+                        </li>
+                        <li>
+                            <p>Điện thoại</p>
+                            <p><strong>0394583xxx</strong></p>
+                        </li>
+                        <li>
+                            <p>Thời gian làm việc</p>
+                            <p><strong>Từ thứ 2 đến thứ 7, từ 08:00 đến 23:00</strong></p>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <div class="dangki">
+                    <h1> Gửi thắc mắc cho chúng tôi</h1>
+                    <form action="">
+                        <table>
+                            <tbody>
+                                <tr>
+                                <td>
+                            <label for="hovaten">Họ và tên:</label>
+                            </td>
+                            <td>
+                            <input type="text" name="hovaten" id="hovaten">
+                          </td>
+                          </tr>
+        
+                         <tr>
+                            <td>
+                            <label for="email">Email:    </label>
+                            </td>
+                            <td>
+                            <input type="text" name="email" id="email">
+                            </td>
+                           
+                        </tr>
+                            <td>
+                            <label for="sodienthoai"> Số điện thoại:     </label>
+                            </td>
+                            <td>
+                            <input type="text" name="sodienthoai" id="sodienthoai">
+                            </td>
+                        <tr>
+                            <td>
+                          
+                        <label for="noidung">Nội dung: </label>
+                        </td>
+                        <td>
+                        <input type="text" name="noidung" id="noidung">
+                        </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                            <input type="button" name="button" id="button" value="Gửi " onclick="Dangky()">
+                            </td>
+                        </tr>
+                        </form>
+                        </tbody>
+                        </table>
+                        
+                        
+                        <script>
+                        function Dangky () {
+                            var hovaten = document.getElementById('hovaten').value;
+                            if (hovaten == ""){
+                                alert("Họ và tên không được để trống");
+                                return false;
+                            }
+                            var email = document.getElementById('email').value;
+                            var regexemail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+(com)+$/; 
+                            if (email == ""){
+                                alert("Email khong duoc de trong");
+                                return false;
+                            } else if( !regexemail.test (email)) {
+                                alert (" Sai cú pháp, cú pháp đúng: nhinguyen@gmail.com");
+                                return false;	
+                            }
+                           
+                            var sodienthoai = document.getElementById('sodienthoai').value;
+                            var regexsdt = /^0\d{3}-\d{3}-\d{3}$/;
+                            if (sodienthoai == ""){
+                                alert("Số điện thoại không được để trống");
+                                return false;
+                            } else if( !regexsdt.test (sodienthoai)) {
+                                alert (" sai cu phap, cu phap dung: 0XXX-XXX-XXX");
+                                return false;	
+                            }
+                           
+        
+                            var noidung = document.getElementById('noidung').value;
+                            if (noidung == ""){
+                                alert("Nội dung không được để trống");
+                                return false;
+                            }
+                            alert ("Gửi thành công");
+                            
+                        }
+        
+        
+                        // header
+        
+                        var navlink = document.getElementById("navlink");
+                function showMenu(){
+                    navlink.style.right = "0";
+                }
+                function hideMenu(){
+                    navlink.style.right = "-200px";
+                }
+        
+                        </script>    
+                </div>
+            </div>
+        </div> 
+        
+                <!-- footer -->
+                <div id='footer' class="" style="text-align:center;">
+                    19507411@NguyenMinhThien - Copy right 2022
+                </div>
+        
+        
+        </body>
+        <script type="text/javascript" src='js/jquery.min.js'></script>
+        <script type="text/javascript" src='js/bootstrap.min.js'></script>
+        <script src='js/elevatezoom/jquery.elevatezoom.js'></script>
+        <script type="text/javascript" src='js/myscript.js'></script>
+</body>
+</html>

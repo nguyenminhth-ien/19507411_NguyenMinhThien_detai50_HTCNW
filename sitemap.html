@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="vi">
+    <title> PetShop
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="loading-icon">
+
+    </div>
+    <div class="container-fluid">
+        <div class='top-bar row'>
+            <div class="col-md-6 top-bar-left">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 top-bar-right">
+				<ul class="nav justify-content-end">
+					<li class="nav-item cart-link">
+						<div class='dropdown-nav popup__cart-body'>
+							<hr class="hr--border-cart-popup"></hr>
+						</div>
+						<!-- end-cart-body-->
+					</li>
+
+					<li class="nav-item login-link">
+                        <a class="nav-link show-user-nav" href="login.html">Đăng nhập</a>
+                    </li>	
+                    <li class="nav-item login-link">
+                        <a class="nav-link show-user-nav" href="register.html">Đăng kí</a>
+                    </li>
+				</ul>
+			</div>
+        </div>
+        <!-- top-bar -->
+        <div class="row clearfix" id="header-logo">
+            <div class='col-12 col-sm-12 col-md-6 col-lg-6 ' id='header-logo-left'>
+                <p class='p-logo'>
+                    <a href="">PetShop</a>
+                </p>
+            </div>
+
+            <div class='col-12 col-sm-12 col-md-6 col-lg-6 header-right'>
+                <div class="search-box">
+                    <div class="form-input-search">
+                        <input type="text" name="txtKeyword" placeholder="Nhập từ khóa cần tìm kiếm" class="search-input">
+                        <span class='icon-search'>
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="search-result">
+                    </div>
+                    <div class="text-example">
+                        <span>ví dụ: WHISKAS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header-Logo -->
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto menu-list">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Trang Chủ
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Dành Cho Mèo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="category.html">THỨC ĂN DINH DƯỠNG</a>
+                            <a class="dropdown-item" href="category.html">PHỤ KIỆN</a>
+                            <a class="dropdown-item" href="category.html">CHUỒNG, NỆM</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Dành Cho Chó
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="category.html">THỨC ĂN DINH DƯỠNG</a>
+                            <a class="dropdown-item" href="category.html">PHỤ KIỆN</a>
+                            <a class="dropdown-item" href="category.html">CHUỒNG, NỆM</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    <div class="container">
+	    <h2 class="text-center text-uppercase sanpham">SƠ ĐỒ TRANG</h2>
+
+        <div class="site">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="category.html">Dành cho chó</a></li>
+                <li><a href="category.html">Dành cho mèo</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+                <li><a href="cart.html">Giỏ hàng</a></li>
+                <li><a href="user_profile.html">User profile</a>
+                    <ul class="sub-menu">
+                        <li><a href="user_profile.html">Thông tin cá nhân</a></li>
+                        <li><a href="change_password.html">Đổi mật khẩu</a></li>
+                        <li><a href="list_bill.html">Danh sách đơn hàng</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li><a href="register.html">Đăng ký</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id='footer' class="" style="text-align:center;">
+        19507411@NguyenMinhThien - Copy right 2022
+	</div>
+    <script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript" src='js/bootstrap.min.js'></script>
+	<script src='js/elevatezoom/jquery.elevatezoom.js'></script>
+	<script type="text/javascript" src='js/myscript.js'></script>
+</body>
+</html>

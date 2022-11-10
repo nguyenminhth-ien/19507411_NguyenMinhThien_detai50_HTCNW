@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="vi">
+    <title> PetShop
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link href="css/glyphicons.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="loading-icon">
+
+    </div>
+    <div class="container-fluid">
+        <div class='top-bar row'>
+            <div class="col-md-6 top-bar-left">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 top-bar-right">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item cart-link">
+                        <a class="nav-link cart-select" href="javascript:void(0)">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng
+                            <span class="cart__count"> (2) </span>
+                        </a>
+                        <div class='dropdown-nav popup__cart-body'>
+
+                            <div class='view-item cart__list-item'>
+                                <div class="media">
+                                    <a href="javascript:void(0)" class='remove-icon cart-popup__remove-icon remove-product-item'>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </a>
+                                    <img class="" src="images/WHISKAS-nuocSotThitBo.jpg" alt="image" width="45px">
+                                    <div class="media-body">
+                                        <p class="mt-0 media__product-title">
+                                            <a href="detail.html">Pate cho mèo vị nước sốt thịt bò WHISKAS Beef Flavour Sauce</a>
+                                        </p>
+                                        <p class='product-price product-price__popup'>
+                                            <span class=''>25.000</span> * 10</p>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a href="javascript:void(0)" class='remove-icon cart-popup__remove-icon remove-product-item'>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </a>
+                                    <img class="" src="images/PURINA-PRO-PLAN-small&miniPuppy.jpg" alt="image" width="45px">
+                                    <div class="media-body">
+                                        <p class="mt-0 media__product-title">
+                                            <a href="detail.html">Thức ăn cho chó con PURINA PRO PLAN Small & Mini Puppy</a>
+                                        </p>
+                                        <p class='product-price product-price__popup'>
+                                            <span class=''>615.000</span> * 1</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr--border-cart-popup"></hr>
+                            <div class='dropdown-cart__caption'>
+                                <div class='cart-total text-right'>
+                                    <span>Tổng tiền:</span>
+                                    <span>
+                                        865.000 VND
+                                    </span>
+                                </div>
+                                <hr class="hr--border-cart-popup"></hr>
+                                <div class='text-center dropdown-cart__bottom'>
+                                    <a href="cart.html" class='btn__link btn__link-dropdow-cart'>
+                                        <span class="glyphicon glyphicon-search"></span> Chi tiết</a>
+                                    <a href="javascript:void(0)" class='btn__link btn__link-dropdow-cart close_popup_cart'>Tiếp tục mua hàng</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end-cart-body-->
+                    </li>
+                    <li class="nav-item login-link">
+                        <a class="nav-link show-user-nav" href="javascript:void(0)"> Minh Thiện</a>
+                        <div class="dropdown-nav popup__user-nav">
+                            <ul>
+                                <li>
+                                    <a href="user_profile.html">Thông tin cá nhân</a>
+                                </li>
+                                <li>
+                                    <a href="change_password.html">Đổi mật khẩu</a>
+                                </li>
+                                <li>
+                                    <a href="list_bill.html">Danh sách đơn hàng</a>
+                                </li>
+                                <li>
+                                    <a href="#">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- top-bar -->
+        <div class="row clearfix" id="header-logo">
+            <div class='col-12 col-sm-12 col-md-6 col-lg-6 ' id='header-logo-left'>
+                <p class='p-logo'>
+                    <a href="#">PetShop</a>
+                </p>
+            </div>
+
+            <div class='col-12 col-sm-12 col-md-6 col-lg-6 header-right'>
+                <div class="search-box">
+                    <div class="form-input-search">
+                        <input type="text" name="txtKeyword" placeholder="Nhập từ khóa cần tìm kiếm" class="search-input">
+                        <span class='icon-search'>
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="search-result">
+                    </div>
+                    <div class="text-example">
+                        <span>ví dụ: WHISKAS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header-Logo -->
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto menu-list">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Trang Chủ
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Dành Cho Mèo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="category.html">THỨC ĂN DINH DƯỠNG</a>
+                            <a class="dropdown-item" href="category.html">PHỤ KIỆN</a>
+                            <a class="dropdown-item" href="category.html">CHUỒNG, NỆM</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Dành Cho Chó
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="category.html">THỨC ĂN DINH DƯỠNG</a>
+                            <a class="dropdown-item" href="category.html">PHỤ KIỆN</a>
+                            <a class="dropdown-item" href="category.html">CHUỒNG, NỆM</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id='wrapper'>
+            <div class="row">
+                <div class="col-12 col-sm-2 col-md-2 col-lg-2 nav-left small--text-center">
+                    <hr class="hr--border-top small-hidden"></hr>
+                    <nav class="nav__sidebar">
+                        <ul>
+                            <li class=''>
+                                <a href='javascript:void(0)'>Dành Cho Chó
+                                    <span class='glyphicon glyphicon-chevron-down'></span>
+                                </a>
+                                <ul>
+                                    <li class='active-li'>
+                                        <a href='category.html'>THỨC ĂN DINH DƯỠNG </a>
+                                    </li>
+                                    <li class=''>
+                                        <a href='category.html'>PHỤ KIỆN</a>
+                                    </li>
+                                    <li class=''>
+                                        <a href='category.html'>CHUỒNG, NỆM</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class=''>
+                                <a href='javascript:void(0)'>Dành Cho Mèo
+                                    <span class='glyphicon glyphicon-chevron-down'></span>
+                                </a>
+                                <ul>
+                                    <li class=''>
+                                        <a href='category.html'>THỨC ĂN DINH DƯỠNG </a>
+                                    </li>
+                                    <li class=''>
+                                        <a href='category.html'>PHỤ KIỆN </a>
+                                    </li>
+                                    <li class=''>
+                                        <a href='category.html'>CHUỒNG, NỆM </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-10 col-lg-10 ">
+                    <div class='main-content'>
+                        <hr class="hr--border-top small-hidden"></hr>
+
+                        <nav class="breadcrumb-nav small--text-center">
+                            <a href="index.html">Trang Chủ</a>
+                            <span class="breadcrumb-nav__separator" aria-hidden="true">›</span>
+                            <a href="#">Dành Cho Chó</a>
+                            <span class="breadcrumb-nav__separator" aria-hidden="true">›</span>
+                            <a href="category.html">THỨC ĂN DINH DƯỠNG</a>
+                            <span class="breadcrumb-nav__separator" aria-hidden="true">›</span>
+                            <a href="detail.html">Thức ăn cho chó con PURINA PRO PLAN Small & Mini Puppy</a>
+                        </nav>
+
+                        <div class='block_wrap row product-single'>
+                            <div class="col-12 col-sm-12 col-md-7 col-lg-6 product-single__block-left">
+                                <span class="badge badge--sale">
+                                    <span>Sale</span>
+                                </span>
+                                <img id='img_01' class="img-view" src="images/PURINA-PRO-PLAN-small&miniPuppy.jpg" data-zoom-image='images/PURINA-PRO-PLAN-small&miniPuppy.jpg' />
+                                <div id="gallery_01">
+                                    <a href="#" data-image="images/PURINA-PRO-PLAN-small&miniPuppy.jpg" data-zoom-image="images/PURINA-PRO-PLAN-small&miniPuppy.jpg">
+                                        <img id="img_01" class='thumb-image' src="images/PURINA-PRO-PLAN-small&miniPuppy.jpg" width="100" />
+                                    </a>
+
+                                    <a href="#" data-image="images/thuc-an-cho-cho-nho-purina-pro-plan-small-mini-puppy1.jpg" data-zoom-image="images/thuc-an-cho-cho-nho-purina-pro-plan-small-mini-puppy1.jpg">
+                                        <img id="img_01" class='thumb-image' src="images/thuc-an-cho-cho-nho-purina-pro-plan-small-mini-puppy1.jpg" width="100" />
+                                    </a>
+
+                                    <a href="#"  data-image="images/thuc-an-cho-cho-nho-purina-pro-plan-small-mini-puppy3.jpg" data-zoom-image="images/thuc-an-cho-cho-nho-purina-pro-plan-small-mini-puppy3.jpg">
+                                        <img id="img_01" class='thumb-image' src="images/thuc-an-cho-cho-nho-purina-pro-plan-small-mini-puppy3.jpg" width="100" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-5 col-lg-6 product-content">
+                                <h3 class='product-name-detail'>Thức ăn cho chó con PURINA PRO PLAN Small & Mini Puppy</h3>
+                                <p>
+                                    <p> <b>Thương hiệu: <u><i> PURINA PRO PLAN </i></u> </b> <br>
+                                        Thức ăn cho chó con PURINA PRO PLAN Small & Mini Puppy (Dry Dog Food) 
+                                        vị thịt gà nguyên chất giúp cân bằng và hoàn chỉnh cho các giống chó 
+                                        nhỏ – mini có trọng lượng khi trưởng thành dưới 10kg. Sản phẩm sử dụng 
+                                        cho chó con dưới 12 tháng tuổi.</p>
+                                </p>
+                                <p class="product-price-detail">
+                                    <span class="product__price-on-sale">615.000</span>
+                                    <s class="product__price--compare">650.000</s> VND
+
+                                </p>
+                                    <div class='selector-wrapper'>
+                                        <span>
+                                            <label for='product__select-quantity'>Số lượng: </label>
+                                        </span>
+                                        <select class="single-option-selector" data-option="option1" id="product__select-quantity">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                            
+                                <div class="product-submit-cart">
+                                    <span class='a__submit'>
+                                        <a href="javascript:void(0)" data-product-id='22' class='btn__link btn__link-cart btn__add-to-cart' data-toggle="modal" data-target=".bd-example-modal-lg">
+                                            Mua hàng
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade bd-example-modal-lg" id='myModal' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Thêm vào giỏ hàng thành công</h5>
+                                        <button type="button" class="close btn__close-icon" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-1-4 hidden-small">
+                                                    <img class='cart__image-product' src="images/PURINA-PRO-PLAN-small&miniPuppy.jpg" />
+                                                </div>
+                                                <div class="col-1-4 hidden-small">
+                                                    <div class="cart__info-product">
+                                                        <h5>Thức ăn cho chó con PURINA PRO PLAN Small & Mini Puppy</h5>
+                                                        <p class="light cart__unit_price">615.000 vnđ</p>
+                                                        <p class="light cart__qantity">Số lượng: 1</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1-5">
+                                                    <div class="cart__total-info">
+                                                        <div class="cart__total-header hidden-small">
+                                                            <h5 class="light">Sản phẩm</h5>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="text-left">Giá sản phẩm</td>
+                                                                    <td class="text-right cart__total-price">615.000 VND</td>
+                                                                </tr>
+                                                                <tr class="shipping-price">
+                                                                    <td class="text-left">Chi phí ship</td>
+                                                                    <td class="text-right cart__ship-price">0 VND</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-left">Tổng cộng</td>
+                                                                    <td class="text-right cart__total">615.000 VND</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <div class="cart__total-footer">
+                                                            <a href="cart.html" class="btn__link btn__checkout uppercase ">Chi tiết
+                                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                                            </a>
+                                                            <a href="checkout.html" class="btn__link btn__checkout uppercase ">Thanh toán</a>
+                                                        </div>
+
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class='product-description'>
+                            <ul>
+                                <li> <i>Sản phẩm dành cho chó con dưới 12 tháng tuổi</i> </li>
+                                <li><b>Nguyên liệu</b>: Gà (gà khử nước – nguồn glucosamine tự nhiên, thịt gà); tấm ủ bia; yến mạch; chất béo động vật được bảo quản bằng hỗn hợp tocopherols (dạng của vitamin E); protein lúa mì; khoáng, vitamin, axit amin, axit hữu cơ và chất tạo mùi tự nhiên (bao gồm canxi, phốt pho, natri, clorua, kali, magiê, vitamin E, vitamin B12, kẽm, sắt, vitamin B3, vitamin C, vitamin D, choline, mangan, vitamin B5, đồng, vitamin B1, vitamin B2, vitamin B6, axit folic, vitamin A, iốt, aluminosilicate, selen); đạm động vật tiêu hóa; protein ngô; lúa mạch; bột củ cải đường; dầu cá và cá khử nước; sữa non và chất chống oxy hóa tự nhiên. </li>
+                            </ul>
+
+                            <ul>
+                                <li>Mã hàng: 9300605125292</li>
+                            </ul>
+                        </div>
+                        <hr class="hr--border-top small-hidden "></hr>
+                        <div class='product--different block_wrap row'>
+
+                            <div class="product-item ">
+                                <div class="thumbnail ">
+                                    <span class="badge badge--new ">
+                                        <span>New</span>
+                                    </span>
+                                    <a href="detail.html">
+                                        <img src="images/ROYAL-CANIN-Mini-Puppy.jpg" alt="... ">
+                                    </a>
+                                    <div class="product-caption text-left ">
+                                        <p class='product-title'>
+                                            <a href="detail.html">Thức ăn cho chó con cỡ nhỏ ROYAL CANIN Mini Puppy</a>
+                                        </p>
+                                        <p class='product-price'>
+                                            <span> 195.000 VND</span>
+                                        </p>
+                                        <a href="detail.html" class="product-btn__a " role="button ">
+                                            <span class="glyphicon glyphicon-search "></span> Chi tiết</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div id='footer' class="" style="text-align:center;">
+			19507411@NguyenMinhThien - Copy right 2022
+		</div>
+    </div>
+    <script type="text/javascript " src='js/jquery.min.js'></script>
+    <script type="text/javascript " src='js/bootstrap.min.js'></script>
+    <script src='js/elevatezoom/jquery.elevatezoom.js'></script>
+    <script type="text/javascript " src='js/myscript.js'></script>
+
+</body>
+
+</html>
